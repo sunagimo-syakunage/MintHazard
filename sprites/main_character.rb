@@ -8,7 +8,7 @@ class MainCharacter < Sprite
         @eb = 0
         @ec = 0
         # 画像
-        Image.register(:player, './image/pointer.png')
+        
         img = Image[:player]
         # img = Image.load('./image/pointer.png')
         # スプライト(キャラクターの中身)

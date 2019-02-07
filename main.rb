@@ -14,6 +14,10 @@ font = Font.new(32)
 Image.register(:logo, './image/logo.png')
 Image.register(:backscreen, './image/backscreen.png')
 Image.register(:mig, './image/mig.png')
+Image.register(:player, './image/pointer.png')
+Image.register(:enemy, './image/enemy.png')
+Image.register(:enemyb, './image/enemyb.png')
+Image.register(:enemyc, './image/enemyc.png')
 
 # 準備系
 

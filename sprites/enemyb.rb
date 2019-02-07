@@ -8,7 +8,7 @@ class Enemyb < Sprite
         @speed = 5
         # 画像
         # img = Image.load('./image/enemyb.png')
-        Image.register(:enemyb, './image/enemyb.png')
+        # Image.register(:enemyb, './image/enemyb.png')
         # img = Image.load('./image/enemy.png')
         img = Image[:enemyb]
         # スプライト(キャラクターの中身)
