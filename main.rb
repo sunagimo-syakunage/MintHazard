@@ -1,10 +1,5 @@
 require "dxopal"
 include DXOpal
-require_remote "./sprites/main_character.rb"
-require_remote "./sprites/enemy.rb"
-require_remote "./sprites/enemyb.rb"
-require_remote "./sprites/enemyc.rb"
-require_remote "./sprites/timer.rb"
 
 scene = "title"
 font = Font.new(32)
@@ -18,6 +13,12 @@ Image.register(:player, './image/pointer.png')
 Image.register(:enemy, './image/enemy.png')
 Image.register(:enemyb, './image/enemyb.png')
 Image.register(:enemyc, './image/enemyc.png')
+
+require_remote "./sprites/main_character.rb"
+require_remote "./sprites/enemy.rb"
+require_remote "./sprites/enemyb.rb"
+require_remote "./sprites/enemyc.rb"
+require_remote "./sprites/timer.rb"
 
 # 準備系
 
