@@ -8,7 +8,7 @@ class MainCharacter < Sprite
         @eb = 0
         @ec = 0
         # 画像
-        
+
         img = Image[:player]
         # img = Image.load('./image/pointer.png')
         # スプライト(キャラクターの中身)
@@ -19,13 +19,11 @@ class MainCharacter < Sprite
         self.draw()
         self.x = Input.mouse_pos_x - 15  # マウスカーソルのx座標
         self.y = Input.mouse_pos_y - 15
-
-        MainCharacter.check(Enemy.enemies,self)
         self.shooting()
     end
 
     def shooting()
-        if Input.mousePush?( M_LBUTTON )
+        if Input.mouse_push?( M_LBUTTON )
             #@bullet << Bullet.new(self.x, self.y)
             self.check(Enemy.enemies()).each do |e|
                 e.vanish()
@@ -49,6 +47,8 @@ class MainCharacter < Sprite
             end
         end
         MainCharacter.clean(Enemy.enemies())
+        MainCharacter.clean(Enemyb.enemies())
+        MainCharacter.clean(Enemyc.enemies())
     end
 
 end

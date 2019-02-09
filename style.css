@@ -1,0 +1,13 @@
+@charset "utf-8";
+
+body{
+  background: url(./image/mint.jpg)no-repeat center center;
+}
+
+.game{
+  display: block;
+  margin: auto;
+  padding:20px;
+  width: 500px;
+  background:#42f48cb0;
+}
