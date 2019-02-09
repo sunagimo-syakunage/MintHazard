@@ -55,9 +55,9 @@ Window.loop do
       Window.draw_scale( 25, 25, Image[:backscreen], 1.2,1.2, centerx=nil, centery=nil, z=0)
       Window.draw_scale( -140, -50, Image[:logo], 0.7, 0.7, centerx=nil, centery=nil, z=0 )
       Window.draw_font(100, 250, "制限時間以内に", font)
-      Window.draw_font(100, 300, "クリックで敵を倒そう", font)
-      Window.draw_font(130, 450, "クリックでスタート", font)
-      if Input.mouse_push?( M_LBUTTON )
+      Window.draw_font(100, 300, "左クリックで敵を倒そう", font)
+      Window.draw_font(130, 450, "SPACEでスタート", font)
+      if Input.key_push?(K_SPACE)
         z=1
         start_time = Time.now
       scene = "main"
@@ -82,8 +82,8 @@ Window.loop do
       Window.draw_scale( 25, 25, Image[:backscreen], 1.2,1.2, centerx=nil, centery=nil, z=0)
       Window.draw_font(155, 100, "GAME OVER!", font)
       Window.draw_font(100, 200, "Score:#{$score}", sfont)
-      Window.draw_font(155, 450, "クリックで戻る", font)
-      if Input.mouse_push?( M_LBUTTON )
+      Window.draw_font(155, 450, "SPACEで戻る", font)
+      if Input.key_push?(K_SPACE)
         $score = 0
         Enemy.enemies().each do |e|
           e.vanish()
