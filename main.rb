@@ -103,6 +103,5 @@ Window.loop do
     end
   end
 
-    break if Input.key_push?(K_ESCAPE)
 end
 end
